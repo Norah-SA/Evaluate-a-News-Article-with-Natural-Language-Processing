@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate a news article with Natural Language Processing</title>
+        <script src="https://kit.fontawesome.com/1aac26dbd0.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                <h1>Evaluate a news article with Natural Language Processing</h1>
+            </div>
+            <div class="">
+                Udicity Project
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results">
+                    <div id="Positive"></div>
+                    <div id="Neutral"></div>
+                    <div id="Negative"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-m">
+                <i class="fa fa-github"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-facebook-f"></i>
+            </div>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+    </body>
+</html>
